@@ -1,4 +1,0 @@
-token_index,token,mean_perturbed_disagreement,mean_original_disagreement,statistic,p_value,significant
-0,Let's,2.0,1.5,0.8333333333333334,0.40465676192728617,False
-1,think,2.75,1.5,1.6201851746019649,0.10519250512004145,False
-2,step-by-step.,2.5,1.5,1.161895003862225,0.2452781168067728,False
