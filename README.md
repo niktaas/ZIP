@@ -10,13 +10,14 @@ This repository provides an implementation of ZIP (Zero-shot Importance of Pertu
 ├── data/
 │   └── aqua-rat_questions.csv        # small AQUA-RAT sample for the demo
 ├── notebooks/
-│   └── zip_demo.ipynb                # end-to-end ZIP demo
+│   ├── zip_demo.ipynb                # end-to-end ZIP demo on AQUA-RAT
+│   └── validation_prompt.ipynb       # validation prompt experiment using the same ZIP process
 ├── src/
 │   ├── creating_sample.py            # loads/creates the AQUA-RAT sample
 │   ├── creating_perturbations.py     # creates deletion, synonym, and co-hyponym perturbations
 │   ├── original_reprompting.py       # runs the original prompt multiple times
 │   ├── perterbation_results.py       # runs perturbed prompts on the same questions
-│   ├── ZIP.py                        # computes ZIP scores
+│   ├── ZIP.py                        # computes ZIP scores for task outputs
 │   ├── stat.py                       # runs significance testing
 │   └── visualization.py              # creates the word-level ZIP visualization
 └── requirements.txt
