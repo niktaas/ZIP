@@ -179,7 +179,7 @@ def generate_synonyms(
         Example1:
         Original Sentence: " Let’s think about it step-by-step. "
         Target word: " think "
-        Task: Please provide""" + str(n_per_method) + """different meaningful alterations of the original sentence, each time replacing the word "think" with a different synonym. Ensure that the rest of the sentence remains unchanged and you only change the target word. Write down the altered sentence and the replaced word as the output.
+        Task: Please provide""" + str(n_per_method) + """different meaningful alterations of the original sentence, each time replacing the word "think" with a different synonym. Ensure that the rest of the sentence remains unchanged. Write down the altered sentence and the replaced word as the output.
         Output:
         1. Let’s "wonder" about it step-by-step. Replaced word: "wonder"
         2. Let's "ponder" about it step-by-step. Replaced word: "ponder"
@@ -239,7 +239,7 @@ def generate_cohyponyms(
         Example:
         Original Sentence: " Let’s think about it step-by-step. "
         Target word: " think "
-        Task: Please provide""" + str(n_per_method) + """different meaningful co-hyponyms of the original sentence, each time replacing the word "think" with a different co-hyponym. Ensure that the rest of the sentence remains unchanged and you only change the target word. Write down the altered sentence and the replaced word as the output.
+        Task: Please provide""" + str(n_per_method) + """different meaningful co-hyponyms of the original sentence, each time replacing the word "think" with a different co-hyponym. Ensure that the rest of the sentence remains unchanged. Write down the altered sentence and the replaced word as the output.
         Output:
         1. Let’s "accept" about it step-by-step. Replaced word: "accept"
         2. Let's "fail" about it step-by-step. Replaced word: "fail"
