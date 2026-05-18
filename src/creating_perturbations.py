@@ -59,8 +59,37 @@ def query_gpt_4_chat(
 def clean_text(text: str) -> str:
     text = str(text).strip()
     text = text.strip('"').strip("'")
+    text = text.strip("“").strip("”")
     text = re.sub(r"\s+", " ", text)
     return text.strip()
+
+
+def clean_replaced_word(text: str) -> str:
+    text = clean_text(text)
+
+    # Keep only the first line in case GPT adds extra text
+    text = text.split("\n")[0].strip()
+
+    # Remove trailing punctuation that may come after the replaced word
+    text = text.strip(".").strip()
+
+    # Remove quotation marks around or inside the replacement
+    text = text.replace('"', "")
+    text = text.replace("“", "")
+    text = text.replace("”", "")
+
+    return clean_text(text)
+
+
+def clean_altered_sentence(text: str) -> str:
+    text = clean_text(text)
+
+    # Remove double quotation marks used around inserted replacement words
+    text = text.replace('"', "")
+    text = text.replace("“", "")
+    text = text.replace("”", "")
+
+    return clean_text(text)
 
 
 def parse_altered_sentences_and_replacements(output: str) -> List[Dict[str, str]]:
@@ -75,12 +104,8 @@ def parse_altered_sentences_and_replacements(output: str) -> List[Dict[str, str]
         sentence_part = chunk.split("Replaced word:")[0]
         replaced_part = chunk.split("Replaced word:")[1]
 
-        altered_sentence = clean_text(sentence_part)
-        replaced_word = clean_text(replaced_part)
-
-        # In case GPT adds extra text after the replaced word
-        replaced_word = replaced_word.split("\n")[0].strip()
-        replaced_word = replaced_word.strip(".").strip()
+        altered_sentence = clean_altered_sentence(sentence_part)
+        replaced_word = clean_replaced_word(replaced_part)
 
         if altered_sentence and replaced_word:
             parsed.append({

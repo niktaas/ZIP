@@ -1,10 +1,6 @@
 # ZIP Reproducibility Code
 
-This repository provides an implementation of ZIP (Zero-shot Importance of Perturbation), a model-agnostic method for measuring how much each prompt word influences an LLM’s output. By perturbing prompt words and comparing responses, ZIP identifies influential words in zero-shot prompts. The figure below illustrates ZIP score generation process for a Chain-of-Thought prompt using GPT-4o on AQUA-RAT, with “step-by-step” highlighted as statistically significant.
-
-<p align="center">
-  <img src="overview.png" width="500" />
-</p>
+This repository provides an implementation of ZIP (Zero-shot Importance of Perturbation), a model-agnostic method for measuring how much each prompt word influences an LLM’s output. By perturbing prompt words and comparing responses, ZIP identifies influential words in zero-shot prompts.
 
 
 ## Repository structure
