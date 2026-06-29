@@ -46,8 +46,9 @@ If you use this code, please cite our paper:
 
 ```bibtex
 @article{sadr2025think,
-  title={Think or Step-by-Step? UnZIPping the Black Box in Zero-Shot Prompts},
-  author={Gohari Sadr, Nikta  and Madhusudan, Sangmitra and Emami, Ali},
+  title={ZIP: Quantifying Which Words Matter
+in Zero-Shot Instructional Prompts},
+  author={Gohari Sadr, Nikta  and Madhusudan, Sangmitra and Asgari, Arash and Sajjad, Hassan and Seyyed-Kalantari, Laleh and Emami, Ali},
   journal={arXiv preprint arXiv:2502.03418},
   year={2025}
 }
